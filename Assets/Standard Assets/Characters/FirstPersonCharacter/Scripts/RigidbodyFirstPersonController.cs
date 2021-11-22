@@ -165,7 +165,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+#if UNITY_EDITOR
+                Debug.Break();
+#else
                 Application.Quit();
+#endif
             }
         }
 
